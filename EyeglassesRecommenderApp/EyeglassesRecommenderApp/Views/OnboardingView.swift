@@ -10,11 +10,9 @@ import SwiftUI
 struct OnboardingView: View {
     var body: some View {
         NavigationStack {
-            NavigationLink("klik kami") {
-                FaceDetectionView()
-                    .ignoresSafeArea()
+            NavigationLink("klik saya") {
+                RootFaceDetectionView()
             }
-            .navigationTitle("SUPERRR")
         }
     }
 }

@@ -14,6 +14,11 @@
 		6533EDA82A93743700CCB5A9 /* FaceShapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6533EDA72A93743700CCB5A9 /* FaceShapeViewController.swift */; };
 		6548FF6B2A93EA7B0099D869 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6548FF6A2A93EA7B0099D869 /* OnboardingView.swift */; };
 		6548FF6D2A93EAAF0099D869 /* FaceDetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6548FF6C2A93EAAF0099D869 /* FaceDetectionView.swift */; };
+		6548FF6F2A93FA490099D869 /* CoretanSwiftui.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6548FF6E2A93FA490099D869 /* CoretanSwiftui.swift */; };
+		6548FFAA2A940D2B0099D869 /* CameraTextOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6548FFA92A940D2B0099D869 /* CameraTextOverlayView.swift */; };
+		6548FFAC2A9412F10099D869 /* RootFaceDetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6548FFAB2A9412F10099D869 /* RootFaceDetectionView.swift */; };
+		6548FFAE2A9419E70099D869 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6548FFAD2A9419E70099D869 /* AppManager.swift */; };
+		6548FFB02A9424790099D869 /* FaceDetectionEnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6548FFAF2A9424790099D869 /* FaceDetectionEnvironmentObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,11 @@
 		6533EDA72A93743700CCB5A9 /* FaceShapeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceShapeViewController.swift; sourceTree = "<group>"; };
 		6548FF6A2A93EA7B0099D869 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		6548FF6C2A93EAAF0099D869 /* FaceDetectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionView.swift; sourceTree = "<group>"; };
+		6548FF6E2A93FA490099D869 /* CoretanSwiftui.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoretanSwiftui.swift; sourceTree = "<group>"; };
+		6548FFA92A940D2B0099D869 /* CameraTextOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTextOverlayView.swift; sourceTree = "<group>"; };
+		6548FFAB2A9412F10099D869 /* RootFaceDetectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFaceDetectionView.swift; sourceTree = "<group>"; };
+		6548FFAD2A9419E70099D869 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		6548FFAF2A9424790099D869 /* FaceDetectionEnvironmentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionEnvironmentObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				6548FF6A2A93EA7B0099D869 /* OnboardingView.swift */,
+				6548FFAB2A9412F10099D869 /* RootFaceDetectionView.swift */,
 				6548FF6C2A93EAAF0099D869 /* FaceDetectionView.swift */,
+				6548FFA92A940D2B0099D869 /* CameraTextOverlayView.swift */,
+				6548FF6E2A93FA490099D869 /* CoretanSwiftui.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -97,6 +110,7 @@
 		6533ED9D2A9368C300CCB5A9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				6548FFAF2A9424790099D869 /* FaceDetectionEnvironmentObject.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -120,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				6533EDA32A93735C00CCB5A9 /* FaceShape.mlmodel */,
+				6548FFAD2A9419E70099D869 /* AppManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -194,9 +209,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6548FF6F2A93FA490099D869 /* CoretanSwiftui.swift in Sources */,
+				6548FFB02A9424790099D869 /* FaceDetectionEnvironmentObject.swift in Sources */,
 				6533EDA42A93735C00CCB5A9 /* FaceShape.mlmodel in Sources */,
 				6533EDA82A93743700CCB5A9 /* FaceShapeViewController.swift in Sources */,
+				6548FFAC2A9412F10099D869 /* RootFaceDetectionView.swift in Sources */,
+				6548FFAA2A940D2B0099D869 /* CameraTextOverlayView.swift in Sources */,
 				6533ED8E2A93665300CCB5A9 /* EyeglassesRecommenderAppApp.swift in Sources */,
+				6548FFAE2A9419E70099D869 /* AppManager.swift in Sources */,
 				6548FF6B2A93EA7B0099D869 /* OnboardingView.swift in Sources */,
 				6548FF6D2A93EAAF0099D869 /* FaceDetectionView.swift in Sources */,
 			);

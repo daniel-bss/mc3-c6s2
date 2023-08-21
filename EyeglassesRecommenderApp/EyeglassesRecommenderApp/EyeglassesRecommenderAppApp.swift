@@ -12,6 +12,7 @@ struct EyeglassesRecommenderAppApp: App {
     var body: some Scene {
         WindowGroup {
             OnboardingView()
+//            CoretanSwiftui()
         }
     }
 }

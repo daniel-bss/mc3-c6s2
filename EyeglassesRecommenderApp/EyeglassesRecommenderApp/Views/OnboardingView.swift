@@ -1,17 +1,17 @@
 //
-//  WelcomeView.swift
+//  OnboardingView.swift
 //  EyeglassesRecommenderApp
 //
-//  Created by Daniel Bernard Sahala Simamora on 21/08/23.
+//  Created by Daniel Bernard Sahala Simamora on 22/08/23.
 //
 
 import SwiftUI
 
-struct WelcomeView: View {
+struct OnboardingView: View {
     var body: some View {
         NavigationStack {
             NavigationLink("klik kami") {
-                FaceShapeView()
+                FaceDetectionView()
                     .ignoresSafeArea()
             }
             .navigationTitle("SUPERRR")
@@ -19,8 +19,8 @@ struct WelcomeView: View {
     }
 }
 
-struct WelcomeView_Previews: PreviewProvider {
+struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeView()
+        OnboardingView()
     }
 }

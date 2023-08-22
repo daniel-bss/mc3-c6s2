@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55510B4B2A94A3A60072D9FF /* RecommendedGlassesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55510B4A2A94A3A60072D9FF /* RecommendedGlassesCard.swift */; };
 		55E4D9F72A93B48E0053D6C0 /* FrameGlassesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4D9F62A93B48E0053D6C0 /* FrameGlassesApp.swift */; };
 		55E4D9F92A93B48E0053D6C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4D9F82A93B48E0053D6C0 /* ContentView.swift */; };
 		55E4D9FB2A93B48F0053D6C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55E4D9FA2A93B48F0053D6C0 /* Assets.xcassets */; };
 		55E4D9FE2A93B48F0053D6C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55E4D9FD2A93B48F0053D6C0 /* Preview Assets.xcassets */; };
+		55E4DA052A93B78A0053D6C0 /* GlassesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4DA042A93B78A0053D6C0 /* GlassesModel.swift */; };
+		55E4DA092A93BC750053D6C0 /* GlassesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4DA082A93BC750053D6C0 /* GlassesCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55510B4A2A94A3A60072D9FF /* RecommendedGlassesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedGlassesCard.swift; sourceTree = "<group>"; };
 		55E4D9F32A93B48E0053D6C0 /* FrameGlasses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameGlasses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E4D9F62A93B48E0053D6C0 /* FrameGlassesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameGlassesApp.swift; sourceTree = "<group>"; };
 		55E4D9F82A93B48E0053D6C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		55E4D9FA2A93B48F0053D6C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55E4D9FD2A93B48F0053D6C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		55E4DA042A93B78A0053D6C0 /* GlassesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassesModel.swift; sourceTree = "<group>"; };
+		55E4DA082A93BC750053D6C0 /* GlassesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassesCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,9 @@
 			children = (
 				55E4D9F62A93B48E0053D6C0 /* FrameGlassesApp.swift */,
 				55E4D9F82A93B48E0053D6C0 /* ContentView.swift */,
+				55510B4A2A94A3A60072D9FF /* RecommendedGlassesCard.swift */,
+				55E4DA082A93BC750053D6C0 /* GlassesCard.swift */,
+				55E4DA042A93B78A0053D6C0 /* GlassesModel.swift */,
 				55E4D9FA2A93B48F0053D6C0 /* Assets.xcassets */,
 				55E4D9FC2A93B48F0053D6C0 /* Preview Content */,
 			);
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55E4DA092A93BC750053D6C0 /* GlassesCard.swift in Sources */,
+				55510B4B2A94A3A60072D9FF /* RecommendedGlassesCard.swift in Sources */,
 				55E4D9F92A93B48E0053D6C0 /* ContentView.swift in Sources */,
+				55E4DA052A93B78A0053D6C0 /* GlassesModel.swift in Sources */,
 				55E4D9F72A93B48E0053D6C0 /* FrameGlassesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

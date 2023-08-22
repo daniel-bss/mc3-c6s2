@@ -11,7 +11,6 @@ import UIKit
 import SwiftUI
 
 class FaceShapeViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
-    @StateObject var vm = FaceDetectionEnvironmentObject()
     
     private let captureSession = AVCaptureSession()
     private lazy var previewLayer: AVCaptureVideoPreviewLayer = {
@@ -37,7 +36,7 @@ class FaceShapeViewController: UIViewController, AVCaptureVideoDataOutputSampleB
         self.addPreviewLayer()
         self.addVideoOutput()
         
-//        self.setupVision()
+        self.setupVision()
         
         
         DispatchQueue.global(qos: .background).async {
@@ -104,11 +103,22 @@ class FaceShapeViewController: UIViewController, AVCaptureVideoDataOutputSampleB
             let objectRecognition = VNCoreMLRequest(model: visionModel, completionHandler: { (request, error) in
                 DispatchQueue.main.async(execute: {
                     // perform all the UI updates on the main queue
-                    if let results = request.results {
-                        print("\nDARI COREML")
-                        print(results)
-//                        print("/n")
+                    guard let results = request.results, results.count > 0 else { return }
+                    
+                    let result = results[0] as! VNCoreMLFeatureValueObservation
+                    
+                    guard let resultArray = result.featureValue.multiArrayValue else {return}
+//                    print(type(of: resultArray[0]))
+                    
+                    var resultContainer: [Double] = []
+                    for i in 0...4 {
+                        resultContainer.append(Double(resultArray[i]))
                     }
+                    
+                    AppManager.shared.labelContainer.append(self.getIndex(resultContainer))
+                    
+                    print(AppManager.shared.labelContainer)
+
                 })
             })
             self.requests = [objectRecognition]
@@ -121,6 +131,19 @@ class FaceShapeViewController: UIViewController, AVCaptureVideoDataOutputSampleB
     
     // ============================================================
     
+    func getIndex(_ array: [Double]) -> Int {
+        var z = array[0]
+        var idx = 0
+        for i in 0..<array.count {
+            if z < array[i] {
+                z = array[i]
+                idx = i
+            }
+        }
+        
+        return idx
+    }
+    
     func captureOutput(_ output: AVCaptureOutput,
                        didOutput sampleBuffer: CMSampleBuffer,
                        from connection: AVCaptureConnection) {
@@ -129,13 +152,13 @@ class FaceShapeViewController: UIViewController, AVCaptureVideoDataOutputSampleB
             return
         }
         self.detectFace(in: frame)
-//        let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: frame, options: [:])
-//
-//        do {
-//            try imageRequestHandler.perform(self.requests)
-//        } catch {
-//            print(error)
-//        }
+        let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: frame, options: [:])
+
+        do {
+            try imageRequestHandler.perform(self.requests)
+        } catch {
+            print(error)
+        }
     }
     
     private func detectFace(in image: CVPixelBuffer) {
@@ -144,20 +167,11 @@ class FaceShapeViewController: UIViewController, AVCaptureVideoDataOutputSampleB
             
             DispatchQueue.main.async {
                 if let results = request.results as? [VNFaceObservation], results.count > 0 {
-                    DispatchQueue.main.async {
-                        AppManager.shared.didShowFace = true
-                    }
-                    print("aa \(AppManager.shared.didShowFace)")
-                    print("\nADA")
-                    print(results)
-                    print()
+                    AppManager.shared.didShowFace = true
                     self.handleFaceDetectionResults(results)
                     
                 } else {
-                    print("bb \(AppManager.shared.didShowFace)")
                     AppManager.shared.didShowFace = false
-                    print("\nTIDAK")
-                    print()
                     self.clearDrawings()
                 }
             }

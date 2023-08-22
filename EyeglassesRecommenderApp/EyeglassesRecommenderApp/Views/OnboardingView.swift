@@ -12,6 +12,8 @@ struct OnboardingView: View {
         NavigationStack {
             NavigationLink("klik saya") {
                 RootFaceDetectionView()
+                    .navigationBarBackButtonHidden(true)
+
             }
         }
     }

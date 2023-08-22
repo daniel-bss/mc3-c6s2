@@ -7,14 +7,24 @@
 
 import SwiftUI
 
-struct ARCoretanView: View {
+struct ARTabView: View {
     var body: some View {
-        TabView
+        TabView {
+            ARMainView()
+                .tabItem {
+                    Label("Anjay", systemImage: "list.dash")
+                }
+            Text("Mantap")
+                .tabItem {
+                    Label("Anjuuy", systemImage: "list.dash")
+                }
+        }
+        .ignoresSafeArea()
     }
 }
 
-struct ARCoretanView_Previews: PreviewProvider {
+struct ARTabView_Previews: PreviewProvider {
     static var previews: some View {
-        ARCoretanView()
+        ARTabView()
     }
 }

@@ -31,9 +31,15 @@ struct Arc: Shape {
 }
 
 struct CameraTextOverlayView: View {
+    
     @State var x: Double = 270.01 // 270 ke 270
     var multiplier: Double = 360.0 / 5
-    @StateObject var vm = FaceDetectionEnvironmentObject()
+    
+    private let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect().eraseToAnyPublisher()
+    
+    @State var didShowFace: Bool = false
+    @State var finishedScanning: Bool = false
+    @State var isProcessing: Bool = false
     
     var body: some View {
         ZStack {
@@ -45,19 +51,14 @@ struct CameraTextOverlayView: View {
                 .stroke(.white, lineWidth: 10)
                 .frame(width: 177 * 2, height: 177 * 2)
             
-            Arc(startAngle: .degrees(270), endAngle: .degrees(x), clockwise: false)
-                .stroke(.green, lineWidth: 12)
-                .frame(width: 177 * 2, height: 177 * 2)
-            
-            
-            Text(vm.didShowFace ? AppManager.moveYourHead : AppManager.positionYourFace)
-                .offset(y: 220)
-                .font(.system(size: 22))
-                .fontWeight(.semibold)
-                .foregroundColor(.white)
-//                .onre(of: AppManager.shared.didShowFace, perform: { newValue in
-                .onAppear {
-                    if !AppManager.shared.didShowFace {
+            // HIJAU
+            if didShowFace {
+                Arc(startAngle: .degrees(270), endAngle: .degrees(x), clockwise: false)
+                    .stroke(.green, lineWidth: 12)
+                    .frame(width: 177 * 2, height: 177 * 2)
+                
+                    .onAppear {
+                        self.x = 270.01
                         for i in 1...5 {
                             DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
                                 withAnimation {
@@ -65,15 +66,50 @@ struct CameraTextOverlayView: View {
                                 }
                             }
                         }
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                            self.finishedScanning = true
+                            AppManager.shared.isLoading = true
+                        }
+
+                    }
+            }
+            
+            Text(getInstructions())
+                .offset(y: 220)
+                .font(.system(size: 22))
+                .fontWeight(.semibold)
+                .foregroundColor(.white)
+                .onReceive(timer) { _ in
+                    self.didShowFace = AppManager.shared.didShowFace
+                    
+                    if !self.didShowFace {
+                        AppManager.shared.isLoading = false
+                        self.finishedScanning = false
                     }
                 }
         }
         .ignoresSafeArea()
     }
-}
-
-struct CameraTextOverlayView_Previews: PreviewProvider {
-    static var previews: some View {
-        CameraTextOverlayView()
+    
+    func getInstructions() -> String {
+        if didShowFace && !finishedScanning {
+            return Instructions.moveYourHead.rawValue
+        } else if !didShowFace && !finishedScanning {
+            return Instructions.positionYourFace.rawValue
+        } else if finishedScanning && AppManager.shared.isLoading {
+            return Instructions.faceScanIsComplt.rawValue
+        } else if finishedScanning && !AppManager.shared.isLoading {
+            return Instructions.processing.rawValue
+        }
+        else {
+            return "MANTAPPP"
+        }
     }
 }
+
+//struct CameraTextOverlayView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CameraTextOverlayView()
+//    }
+//}

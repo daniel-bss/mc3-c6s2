@@ -44,18 +44,18 @@ struct CameraTextOverlayView: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .foregroundColor(Color.black.opacity(0.7))
+                .foregroundColor(Color.black.opacity(0.5))
                 .mask(Window())
             
             Arc(startAngle: .degrees(0), endAngle: .degrees(360), clockwise: false)
-                .stroke(.white, lineWidth: 10)
-                .frame(width: 177 * 2, height: 177 * 2)
+                .stroke(.white, lineWidth: 9)
+                .frame(width: 180 * 2, height: 180 * 2)
             
             // HIJAU
             if didShowFace {
                 Arc(startAngle: .degrees(270), endAngle: .degrees(x), clockwise: false)
-                    .stroke(.green, lineWidth: 12)
-                    .frame(width: 177 * 2, height: 177 * 2)
+                    .stroke(.green, lineWidth: 10)
+                    .frame(width: 180 * 2, height: 180 * 2)
                 
                     .onAppear {
                         self.x = 270.01

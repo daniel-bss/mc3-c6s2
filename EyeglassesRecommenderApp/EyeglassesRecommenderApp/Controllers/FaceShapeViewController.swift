@@ -23,6 +23,7 @@ class FaceShapeViewController: UIViewController, AVCaptureVideoDataOutputSampleB
     
     // Vision parts
     private var requests = [VNRequest]()
+    private var requests2 = [VNRequest]()
     
     // Face landmarks
     private var drawings: [CAShapeLayer] = []
@@ -94,34 +95,61 @@ class FaceShapeViewController: UIViewController, AVCaptureVideoDataOutputSampleB
         let error: NSError! = nil
         
         // ML MODEL!
-        guard let modelURL = Bundle.main.url(forResource: "FaceShape", withExtension: "mlmodelc") else {
-            return NSError(domain: "FaceShapeViewController", code: -1, userInfo: [NSLocalizedDescriptionKey: "Model file is missing"])
+//        guard let modelURL = Bundle.main.url(forResource: "FaceShape", withExtension: "mlmodelc") else {
+        guard let modelURL = Bundle.main.url(forResource: "FaceShapeModel", withExtension: "mlmodelc") else {
+            return NSError(domain: "FaceShapeViewController", code: -1, userInfo: [NSLocalizedDescriptionKey: "Model file (FACE SHAPE) is missing"])
+        }
+        
+        guard let modelURL2 = Bundle.main.url(forResource: "SkinToneModel", withExtension: "mlmodelc") else {
+            return NSError(domain: "FaceShapeViewController", code: -1, userInfo: [NSLocalizedDescriptionKey: "Model file (SKIN TONE) is missing"])
         }
         
         do {
             let visionModel = try VNCoreMLModel(for: MLModel(contentsOf: modelURL))
+            let skintToneModel = try VNCoreMLModel(for: MLModel(contentsOf: modelURL2))
+            
             let objectRecognition = VNCoreMLRequest(model: visionModel, completionHandler: { (request, error) in
                 DispatchQueue.main.async(execute: {
                     // perform all the UI updates on the main queue
                     guard let results = request.results, results.count > 0 else { return }
-                    
                     let result = results[0] as! VNCoreMLFeatureValueObservation
-                    
                     guard let resultArray = result.featureValue.multiArrayValue else {return}
-//                    print(type(of: resultArray[0]))
                     
                     var resultContainer: [Double] = []
-                    for i in 0...4 {
+                    for i in 0...4 { // 5 label
                         resultContainer.append(Double(resultArray[i]))
                     }
                     
-                    AppManager.shared.labelContainer.append(self.getIndex(resultContainer))
+//                    print("\nFACE SHAPE")
+//                    print(resultContainer)
                     
-                    print(AppManager.shared.labelContainer)
+                    AppManager.shared.faceLabelContainer.append(self.getIndex(resultContainer))
 
                 })
             })
+            
+            let skinToneRecognition = VNCoreMLRequest(model: skintToneModel, completionHandler: { (request, error) in
+                DispatchQueue.main.async(execute: {
+                    // perform all the UI updates on the main queue
+                    guard let results = request.results, results.count > 0 else { return }
+                    let result = results[0] as! VNCoreMLFeatureValueObservation
+                    guard let resultArray = result.featureValue.multiArrayValue else {return}
+                    
+                    var resultContainer: [Double] = []
+                    for i in 0...2 { // 3 label
+                        resultContainer.append(Double(resultArray[i]))
+                    }
+                    
+//                    print("\nSKIN TONE")
+//                    print(resultContainer)
+                    
+                    AppManager.shared.skinToneLabelContainer.append(self.getIndex(resultContainer))
+                })
+            })
+            
             self.requests = [objectRecognition]
+            self.requests2 = [skinToneRecognition]
+            
         } catch let error as NSError {
             print("Model loading went wrong: \(error)")
         }
@@ -156,6 +184,7 @@ class FaceShapeViewController: UIViewController, AVCaptureVideoDataOutputSampleB
 
         do {
             try imageRequestHandler.perform(self.requests)
+            try imageRequestHandler.perform(self.requests2)
         } catch {
             print(error)
         }
@@ -168,11 +197,8 @@ class FaceShapeViewController: UIViewController, AVCaptureVideoDataOutputSampleB
             DispatchQueue.main.async {
                 if let results = request.results as? [VNFaceObservation], results.count > 0 {
                     AppManager.shared.didShowFace = true
-                    self.handleFaceDetectionResults(results)
-                    
                 } else {
                     AppManager.shared.didShowFace = false
-                    self.clearDrawings()
                 }
             }
         })
@@ -180,6 +206,7 @@ class FaceShapeViewController: UIViewController, AVCaptureVideoDataOutputSampleB
         try? imageRequestHandler.perform([faceDetectionRequest])
     }
     
+    /*
     private func handleFaceDetectionResults(_ observedFaces: [VNFaceObservation]) {
         
         self.clearDrawings()
@@ -237,6 +264,12 @@ class FaceShapeViewController: UIViewController, AVCaptureVideoDataOutputSampleB
         
         return eyeDrawing
     }
+     */
+    
+    let faceShapeLabels: [String] = ["Heart", "Oblong", "Oval", "Round", "Square"]
+    let skinToneLabels: [String] = ["Olive", "White", "Dark"] // olive: 0, white: 1, dark: 2
+    
+    
 }
 
 

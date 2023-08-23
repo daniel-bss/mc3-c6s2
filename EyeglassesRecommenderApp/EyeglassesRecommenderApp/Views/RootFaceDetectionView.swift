@@ -24,11 +24,13 @@ struct RootFaceDetectionView: View {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
                             self.isPresented = true
                         })
+                        
                     }
             }
         }
         .navigationDestination(isPresented: $isPresented, destination: {
-            FaceShapeResult()
+            FaceShapeResult() // coretan
+//            ARMainView()
                 .navigationBarBackButtonHidden(true)
         })
         .onReceive(timer) { _ in

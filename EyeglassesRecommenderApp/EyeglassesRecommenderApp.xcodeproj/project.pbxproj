@@ -23,6 +23,23 @@
 		6548FFD52A9544CD0099D869 /* ARTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6548FFD42A9544CD0099D869 /* ARTabView.swift */; };
 		6548FFD72A9546AF0099D869 /* ARMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6548FFD62A9546AF0099D869 /* ARMainView.swift */; };
 		6548FFD92A954D260099D869 /* ARCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6548FFD82A954D260099D869 /* ARCircleView.swift */; };
+		6548FFDD2A9600E70099D869 /* SkinToneModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6548FFDC2A9600E70099D869 /* SkinToneModel.mlmodel */; };
+		6548FFDF2A9681D20099D869 /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6548FFDE2A9681D20099D869 /* Frame.swift */; };
+		6548FFE12A96952E0099D869 /* FaceShapeModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6548FFE02A96952E0099D869 /* FaceShapeModel.mlmodel */; };
+		6551D6D72A96A317004C0D08 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551D6D62A96A317004C0D08 /* ARViewContainer.swift */; };
+		6551D6D92A96A4E6004C0D08 /* CoretanARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551D6D82A96A4E6004C0D08 /* CoretanARView.swift */; };
+		6551D6EE2A96B197004C0D08 /* square-medium-pink.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6DE2A96B197004C0D08 /* square-medium-pink.usdz */; };
+		6551D6EF2A96B197004C0D08 /* square-medium-blue.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6DF2A96B197004C0D08 /* square-medium-blue.usdz */; };
+		6551D6F02A96B197004C0D08 /* aviator-light-gray.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6E12A96B197004C0D08 /* aviator-light-gray.usdz */; };
+		6551D6F12A96B197004C0D08 /* rectangle-dark-blue.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6E32A96B197004C0D08 /* rectangle-dark-blue.usdz */; };
+		6551D6F22A96B197004C0D08 /* rectangle-medium-green.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6E42A96B197004C0D08 /* rectangle-medium-green.usdz */; };
+		6551D6F32A96B197004C0D08 /* rectangle-light-pink.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6E52A96B197004C0D08 /* rectangle-light-pink.usdz */; };
+		6551D6F42A96B197004C0D08 /* oval-light-pink.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6E72A96B197004C0D08 /* oval-light-pink.usdz */; };
+		6551D6F52A96B197004C0D08 /* oval-medium-blue.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6E82A96B197004C0D08 /* oval-medium-blue.usdz */; };
+		6551D6F62A96B197004C0D08 /* cateye-dark-green.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6EA2A96B197004C0D08 /* cateye-dark-green.usdz */; };
+		6551D6F72A96B197004C0D08 /* round-medium-green.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6EC2A96B197004C0D08 /* round-medium-green.usdz */; };
+		6551D6F82A96B197004C0D08 /* round-light-pink.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6ED2A96B197004C0D08 /* round-light-pink.usdz */; };
+		6551D6FA2A96C696004C0D08 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551D6F92A96C696004C0D08 /* AppColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +60,23 @@
 		6548FFD42A9544CD0099D869 /* ARTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTabView.swift; sourceTree = "<group>"; };
 		6548FFD62A9546AF0099D869 /* ARMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARMainView.swift; sourceTree = "<group>"; };
 		6548FFD82A954D260099D869 /* ARCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCircleView.swift; sourceTree = "<group>"; };
+		6548FFDC2A9600E70099D869 /* SkinToneModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SkinToneModel.mlmodel; sourceTree = "<group>"; };
+		6548FFDE2A9681D20099D869 /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
+		6548FFE02A96952E0099D869 /* FaceShapeModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FaceShapeModel.mlmodel; sourceTree = "<group>"; };
+		6551D6D62A96A317004C0D08 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		6551D6D82A96A4E6004C0D08 /* CoretanARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoretanARView.swift; sourceTree = "<group>"; };
+		6551D6DE2A96B197004C0D08 /* square-medium-pink.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "square-medium-pink.usdz"; sourceTree = "<group>"; };
+		6551D6DF2A96B197004C0D08 /* square-medium-blue.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "square-medium-blue.usdz"; sourceTree = "<group>"; };
+		6551D6E12A96B197004C0D08 /* aviator-light-gray.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "aviator-light-gray.usdz"; sourceTree = "<group>"; };
+		6551D6E32A96B197004C0D08 /* rectangle-dark-blue.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "rectangle-dark-blue.usdz"; sourceTree = "<group>"; };
+		6551D6E42A96B197004C0D08 /* rectangle-medium-green.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "rectangle-medium-green.usdz"; sourceTree = "<group>"; };
+		6551D6E52A96B197004C0D08 /* rectangle-light-pink.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "rectangle-light-pink.usdz"; sourceTree = "<group>"; };
+		6551D6E72A96B197004C0D08 /* oval-light-pink.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "oval-light-pink.usdz"; sourceTree = "<group>"; };
+		6551D6E82A96B197004C0D08 /* oval-medium-blue.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "oval-medium-blue.usdz"; sourceTree = "<group>"; };
+		6551D6EA2A96B197004C0D08 /* cateye-dark-green.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "cateye-dark-green.usdz"; sourceTree = "<group>"; };
+		6551D6EC2A96B197004C0D08 /* round-medium-green.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "round-medium-green.usdz"; sourceTree = "<group>"; };
+		6551D6ED2A96B197004C0D08 /* round-light-pink.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "round-light-pink.usdz"; sourceTree = "<group>"; };
+		6551D6F92A96C696004C0D08 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +109,18 @@
 		6533ED8C2A93665300CCB5A9 /* EyeglassesRecommenderApp */ = {
 			isa = PBXGroup;
 			children = (
+				6551D6DE2A96B197004C0D08 /* square-medium-pink.usdz */,
+				6551D6DF2A96B197004C0D08 /* square-medium-blue.usdz */,
+				6551D6E12A96B197004C0D08 /* aviator-light-gray.usdz */,
+				6551D6E32A96B197004C0D08 /* rectangle-dark-blue.usdz */,
+				6551D6E42A96B197004C0D08 /* rectangle-medium-green.usdz */,
+				6551D6E52A96B197004C0D08 /* rectangle-light-pink.usdz */,
+				6551D6E72A96B197004C0D08 /* oval-light-pink.usdz */,
+				6551D6E82A96B197004C0D08 /* oval-medium-blue.usdz */,
+				6551D6EA2A96B197004C0D08 /* cateye-dark-green.usdz */,
+				6551D6EC2A96B197004C0D08 /* round-medium-green.usdz */,
+				6551D6ED2A96B197004C0D08 /* round-light-pink.usdz */,
+				6551D6DC2A96B197004C0D08 /* ARFrames */,
 				6533EDA22A93732100CCB5A9 /* Resources */,
 				6533ED9F2A93694700CCB5A9 /* Components */,
 				6533ED9B2A9368A500CCB5A9 /* Models */,
@@ -99,6 +145,7 @@
 		6533ED9B2A9368A500CCB5A9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6548FFDE2A9681D20099D869 /* Frame.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -110,8 +157,8 @@
 				6548FFAB2A9412F10099D869 /* RootFaceDetectionView.swift */,
 				6548FF6C2A93EAAF0099D869 /* FaceDetectionView.swift */,
 				6548FFA92A940D2B0099D869 /* CameraTextOverlayView.swift */,
-				6548FF6E2A93FA490099D869 /* CoretanSwiftui.swift */,
 				6548FFD12A95374A0099D869 /* LoadingView.swift */,
+				6548FF6E2A93FA490099D869 /* CoretanSwiftui.swift */,
 				6548FFD32A9544AA0099D869 /* ARViews */,
 			);
 			path = Views;
@@ -137,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				6548FFD82A954D260099D869 /* ARCircleView.swift */,
+				6551D6F92A96C696004C0D08 /* AppColor.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -145,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				6533EDA32A93735C00CCB5A9 /* FaceShape.mlmodel */,
+				6548FFE02A96952E0099D869 /* FaceShapeModel.mlmodel */,
+				6548FFDC2A9600E70099D869 /* SkinToneModel.mlmodel */,
 				6548FFAD2A9419E70099D869 /* AppManager.swift */,
 			);
 			path = Resources;
@@ -155,8 +205,17 @@
 			children = (
 				6548FFD42A9544CD0099D869 /* ARTabView.swift */,
 				6548FFD62A9546AF0099D869 /* ARMainView.swift */,
+				6551D6D62A96A317004C0D08 /* ARViewContainer.swift */,
+				6551D6D82A96A4E6004C0D08 /* CoretanARView.swift */,
 			);
 			path = ARViews;
+			sourceTree = "<group>";
+		};
+		6551D6DC2A96B197004C0D08 /* ARFrames */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ARFrames;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,8 +276,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6551D6EF2A96B197004C0D08 /* square-medium-blue.usdz in Resources */,
+				6551D6F12A96B197004C0D08 /* rectangle-dark-blue.usdz in Resources */,
+				6551D6F32A96B197004C0D08 /* rectangle-light-pink.usdz in Resources */,
+				6551D6F42A96B197004C0D08 /* oval-light-pink.usdz in Resources */,
+				6551D6F72A96B197004C0D08 /* round-medium-green.usdz in Resources */,
+				6551D6F22A96B197004C0D08 /* rectangle-medium-green.usdz in Resources */,
 				6533ED952A93665400CCB5A9 /* Preview Assets.xcassets in Resources */,
+				6551D6F82A96B197004C0D08 /* round-light-pink.usdz in Resources */,
+				6551D6F52A96B197004C0D08 /* oval-medium-blue.usdz in Resources */,
 				6533ED922A93665400CCB5A9 /* Assets.xcassets in Resources */,
+				6551D6F02A96B197004C0D08 /* aviator-light-gray.usdz in Resources */,
+				6551D6EE2A96B197004C0D08 /* square-medium-pink.usdz in Resources */,
+				6551D6F62A96B197004C0D08 /* cateye-dark-green.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,15 +299,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6548FFDD2A9600E70099D869 /* SkinToneModel.mlmodel in Sources */,
+				6551D6FA2A96C696004C0D08 /* AppColor.swift in Sources */,
+				6548FFDF2A9681D20099D869 /* Frame.swift in Sources */,
 				6548FF6F2A93FA490099D869 /* CoretanSwiftui.swift in Sources */,
 				6548FFB02A9424790099D869 /* FaceDetectionEnvironmentObject.swift in Sources */,
 				6533EDA42A93735C00CCB5A9 /* FaceShape.mlmodel in Sources */,
+				6551D6D72A96A317004C0D08 /* ARViewContainer.swift in Sources */,
 				6548FFD92A954D260099D869 /* ARCircleView.swift in Sources */,
+				6551D6D92A96A4E6004C0D08 /* CoretanARView.swift in Sources */,
 				6548FFD22A95374A0099D869 /* LoadingView.swift in Sources */,
 				6533EDA82A93743700CCB5A9 /* FaceShapeViewController.swift in Sources */,
 				6548FFAC2A9412F10099D869 /* RootFaceDetectionView.swift in Sources */,
 				6548FFAA2A940D2B0099D869 /* CameraTextOverlayView.swift in Sources */,
 				6533ED8E2A93665300CCB5A9 /* EyeglassesRecommenderAppApp.swift in Sources */,
+				6548FFE12A96952E0099D869 /* FaceShapeModel.mlmodel in Sources */,
 				6548FFD52A9544CD0099D869 /* ARTabView.swift in Sources */,
 				6548FFAE2A9419E70099D869 /* AppManager.swift in Sources */,
 				6548FF6B2A93EA7B0099D869 /* OnboardingView.swift in Sources */,

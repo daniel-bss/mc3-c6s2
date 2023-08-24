@@ -101,9 +101,8 @@ struct CameraTextOverlayView: View {
             return Instructions.faceScanIsComplt.rawValue
         } else if finishedScanning && !AppManager.shared.isLoading {
             return Instructions.processing.rawValue
-        }
-        else {
-            return "MANTAPPP"
+        } else {
+            return ""
         }
     }
 }

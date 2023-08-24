@@ -18,6 +18,9 @@ struct OnboardingView: View {
                 .foregroundColor(.bluePrimary)
                 .padding(.bottom, 12)
                 .padding(.top, -80)
+                .onAppear {
+                    AppManager.shared.isLoading = false
+                }
 
             
             Text("Face Scanning Preparation")

@@ -14,6 +14,8 @@ struct ARMainView: View {
     @State var frameAssetBefore: String = "square-medium-pink"
     @State var frameAssets: [String] = []
     
+    @State var sheetIsPresented: Bool = false
+    
     let width: Double = 56 * 1.5 // = 84
     
     var body: some View {
@@ -33,6 +35,23 @@ struct ARMainView: View {
 //                .onAppear {
 //                    self.frameAssets = AppManager.shared.getFrameRecommendations(faceShape: vm.faceShapeName, skinTone: vm.skinToneName)
 //                }
+            Button {
+                self.sheetIsPresented.toggle()
+            } label: {
+                FindOutWhyView()
+            }
+            .sheet(isPresented: $sheetIsPresented) {
+//                Text("Based on our scanning you have a **\(frameAsset.split(separator: "-")[0])** and **\(frameAsset.split(separator: "-")[1]) Skin Tone**. So, your face suitable with eyeglasses that are **\(Cat Eye Frame)** and **\(Bright)** Color.")
+                Text("Based on our scanning you have a **\(vm.faceShapeName.capitalized) Face Shape** and **\(vm.skinToneName.capitalized) Skin Tone**")
+                    .presentationDetents([.height(200), .medium, .large])
+                    .multilineTextAlignment(.center)
+                    .presentationDragIndicator(.automatic)
+                    .padding(.horizontal, 16)
+            }
+            .onAppear {
+                
+            }
+            .offset(x: 120, y: -340)
             
             HStack {
                 ForEach(self.frameAssets, id: \.self) { frameImageName in

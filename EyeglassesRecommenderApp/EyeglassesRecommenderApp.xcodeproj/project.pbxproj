@@ -42,6 +42,7 @@
 		6551D6FA2A96C696004C0D08 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551D6F92A96C696004C0D08 /* AppColor.swift */; };
 		6551D6FE2A97556E004C0D08 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 6551D6FD2A97556E004C0D08 /* Experience.rcproject */; };
 		6551D7002A975DFB004C0D08 /* FindOutWhyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551D6FF2A975DFB004C0D08 /* FindOutWhyView.swift */; };
+		6551D7022A9767AC004C0D08 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551D7012A9767AC004C0D08 /* SheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		6551D6F92A96C696004C0D08 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		6551D6FD2A97556E004C0D08 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		6551D6FF2A975DFB004C0D08 /* FindOutWhyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindOutWhyView.swift; sourceTree = "<group>"; };
+		6551D7012A9767AC004C0D08 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				6548FFD12A95374A0099D869 /* LoadingView.swift */,
 				6548FF6E2A93FA490099D869 /* CoretanSwiftui.swift */,
 				6548FFD32A9544AA0099D869 /* ARViews */,
+				6551D7012A9767AC004C0D08 /* SheetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				6548FFD92A954D260099D869 /* ARCircleView.swift in Sources */,
 				6551D6D92A96A4E6004C0D08 /* CoretanARView.swift in Sources */,
 				6548FFD22A95374A0099D869 /* LoadingView.swift in Sources */,
+				6551D7022A9767AC004C0D08 /* SheetView.swift in Sources */,
 				6533EDA82A93743700CCB5A9 /* FaceShapeViewController.swift in Sources */,
 				6548FFAC2A9412F10099D869 /* RootFaceDetectionView.swift in Sources */,
 				6551D7002A975DFB004C0D08 /* FindOutWhyView.swift in Sources */,

@@ -9,7 +9,21 @@ import SwiftUI
 
 struct FindOutWhyView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            ZStack {
+                RoundedRectangle(cornerRadius: 500)
+                    .foregroundColor(.blueLight)
+                    .frame(width: 125, height: 36)
+                HStack {
+                    Image(systemName: "info.circle")
+                    Text("Find out why")
+                        .font(.system(size: 13))
+                }
+            }
+            .foregroundColor(.bluePrimary)
+        }
+        .frame(width: 115, height: 36)
+        
     }
 }
 

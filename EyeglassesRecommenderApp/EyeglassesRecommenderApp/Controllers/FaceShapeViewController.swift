@@ -81,9 +81,7 @@ class FaceShapeViewController: UIViewController, AVCaptureVideoDataOutputSampleB
 //        let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:])
 //
 //        do {
-//            print("anjay1")
 //            try imageRequestHandler.perform(self.requests)
-//            print("anjay2\n")
 //        } catch {
 //            print(error)
 //        }

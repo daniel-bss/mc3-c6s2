@@ -5,7 +5,7 @@
 //  Created by Daniel Bernard Sahala Simamora on 24/08/23.
 //
 
-import SwiftUI
+//import SwiftUI
 
 //struct CoretanARView: View {
 //    var body: some View {

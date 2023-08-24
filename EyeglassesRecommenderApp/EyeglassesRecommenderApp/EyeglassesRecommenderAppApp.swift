@@ -11,10 +11,6 @@ import SwiftUI
 struct EyeglassesRecommenderAppApp: App {
     var body: some Scene {
         WindowGroup {
-//            CoretanARView()
-//            ARMainView()
-//            CoretanSwiftui()
-            
             OnboardingView()
         }
     }

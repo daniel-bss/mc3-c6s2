@@ -20,6 +20,7 @@ struct RootFaceDetectionView: View {
                 CameraTextOverlayView()
             } else {
                 LoadingView()
+                    .scaleEffect(CGSize(width: 1.5, height: 1.5))
                     .onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
                             self.isPresented = true

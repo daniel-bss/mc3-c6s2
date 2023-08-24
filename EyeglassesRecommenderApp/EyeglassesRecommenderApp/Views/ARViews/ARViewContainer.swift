@@ -24,7 +24,7 @@ struct ARViewContainer: UIViewRepresentable {
         modelEntity.transform.rotation = simd_quatf(angle: Float(90 * Double.pi / 180.0), axis: SIMD3<Float>(0, 1, 0))
         
         arView.scene.anchors.append(faceAnchor)
-        faceAnchor.addChild(modelEntity)
+//        faceAnchor.addChild(modelEntity)
         
         let newConfig = ARFaceTrackingConfiguration()
         newConfig.isLightEstimationEnabled = true

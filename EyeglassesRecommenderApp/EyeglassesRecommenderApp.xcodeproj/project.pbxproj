@@ -28,17 +28,6 @@
 		6548FFE12A96952E0099D869 /* FaceShapeModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6548FFE02A96952E0099D869 /* FaceShapeModel.mlmodel */; };
 		6551D6D72A96A317004C0D08 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551D6D62A96A317004C0D08 /* ARViewContainer.swift */; };
 		6551D6D92A96A4E6004C0D08 /* CoretanARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551D6D82A96A4E6004C0D08 /* CoretanARView.swift */; };
-		6551D6EE2A96B197004C0D08 /* square-medium-pink.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6DE2A96B197004C0D08 /* square-medium-pink.usdz */; };
-		6551D6EF2A96B197004C0D08 /* square-medium-blue.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6DF2A96B197004C0D08 /* square-medium-blue.usdz */; };
-		6551D6F02A96B197004C0D08 /* aviator-light-gray.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6E12A96B197004C0D08 /* aviator-light-gray.usdz */; };
-		6551D6F12A96B197004C0D08 /* rectangle-dark-blue.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6E32A96B197004C0D08 /* rectangle-dark-blue.usdz */; };
-		6551D6F22A96B197004C0D08 /* rectangle-medium-green.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6E42A96B197004C0D08 /* rectangle-medium-green.usdz */; };
-		6551D6F32A96B197004C0D08 /* rectangle-light-pink.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6E52A96B197004C0D08 /* rectangle-light-pink.usdz */; };
-		6551D6F42A96B197004C0D08 /* oval-light-pink.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6E72A96B197004C0D08 /* oval-light-pink.usdz */; };
-		6551D6F52A96B197004C0D08 /* oval-medium-blue.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6E82A96B197004C0D08 /* oval-medium-blue.usdz */; };
-		6551D6F62A96B197004C0D08 /* cateye-dark-green.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6EA2A96B197004C0D08 /* cateye-dark-green.usdz */; };
-		6551D6F72A96B197004C0D08 /* round-medium-green.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6EC2A96B197004C0D08 /* round-medium-green.usdz */; };
-		6551D6F82A96B197004C0D08 /* round-light-pink.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6551D6ED2A96B197004C0D08 /* round-light-pink.usdz */; };
 		6551D6FA2A96C696004C0D08 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551D6F92A96C696004C0D08 /* AppColor.swift */; };
 		6551D6FE2A97556E004C0D08 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 6551D6FD2A97556E004C0D08 /* Experience.rcproject */; };
 		6551D7002A975DFB004C0D08 /* FindOutWhyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551D6FF2A975DFB004C0D08 /* FindOutWhyView.swift */; };
@@ -68,17 +57,6 @@
 		6548FFE02A96952E0099D869 /* FaceShapeModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FaceShapeModel.mlmodel; sourceTree = "<group>"; };
 		6551D6D62A96A317004C0D08 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 		6551D6D82A96A4E6004C0D08 /* CoretanARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoretanARView.swift; sourceTree = "<group>"; };
-		6551D6DE2A96B197004C0D08 /* square-medium-pink.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "square-medium-pink.usdz"; sourceTree = "<group>"; };
-		6551D6DF2A96B197004C0D08 /* square-medium-blue.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "square-medium-blue.usdz"; sourceTree = "<group>"; };
-		6551D6E12A96B197004C0D08 /* aviator-light-gray.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "aviator-light-gray.usdz"; sourceTree = "<group>"; };
-		6551D6E32A96B197004C0D08 /* rectangle-dark-blue.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "rectangle-dark-blue.usdz"; sourceTree = "<group>"; };
-		6551D6E42A96B197004C0D08 /* rectangle-medium-green.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "rectangle-medium-green.usdz"; sourceTree = "<group>"; };
-		6551D6E52A96B197004C0D08 /* rectangle-light-pink.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "rectangle-light-pink.usdz"; sourceTree = "<group>"; };
-		6551D6E72A96B197004C0D08 /* oval-light-pink.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "oval-light-pink.usdz"; sourceTree = "<group>"; };
-		6551D6E82A96B197004C0D08 /* oval-medium-blue.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "oval-medium-blue.usdz"; sourceTree = "<group>"; };
-		6551D6EA2A96B197004C0D08 /* cateye-dark-green.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "cateye-dark-green.usdz"; sourceTree = "<group>"; };
-		6551D6EC2A96B197004C0D08 /* round-medium-green.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "round-medium-green.usdz"; sourceTree = "<group>"; };
-		6551D6ED2A96B197004C0D08 /* round-light-pink.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "round-light-pink.usdz"; sourceTree = "<group>"; };
 		6551D6F92A96C696004C0D08 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		6551D6FD2A97556E004C0D08 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		6551D6FF2A975DFB004C0D08 /* FindOutWhyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindOutWhyView.swift; sourceTree = "<group>"; };
@@ -115,17 +93,6 @@
 		6533ED8C2A93665300CCB5A9 /* EyeglassesRecommenderApp */ = {
 			isa = PBXGroup;
 			children = (
-				6551D6DE2A96B197004C0D08 /* square-medium-pink.usdz */,
-				6551D6DF2A96B197004C0D08 /* square-medium-blue.usdz */,
-				6551D6E12A96B197004C0D08 /* aviator-light-gray.usdz */,
-				6551D6E32A96B197004C0D08 /* rectangle-dark-blue.usdz */,
-				6551D6E42A96B197004C0D08 /* rectangle-medium-green.usdz */,
-				6551D6E52A96B197004C0D08 /* rectangle-light-pink.usdz */,
-				6551D6E72A96B197004C0D08 /* oval-light-pink.usdz */,
-				6551D6E82A96B197004C0D08 /* oval-medium-blue.usdz */,
-				6551D6EA2A96B197004C0D08 /* cateye-dark-green.usdz */,
-				6551D6EC2A96B197004C0D08 /* round-medium-green.usdz */,
-				6551D6ED2A96B197004C0D08 /* round-light-pink.usdz */,
 				6551D6FD2A97556E004C0D08 /* Experience.rcproject */,
 				6551D6DC2A96B197004C0D08 /* ARFrames */,
 				6533EDA22A93732100CCB5A9 /* Resources */,
@@ -285,19 +252,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6551D6EF2A96B197004C0D08 /* square-medium-blue.usdz in Resources */,
-				6551D6F12A96B197004C0D08 /* rectangle-dark-blue.usdz in Resources */,
-				6551D6F32A96B197004C0D08 /* rectangle-light-pink.usdz in Resources */,
-				6551D6F42A96B197004C0D08 /* oval-light-pink.usdz in Resources */,
-				6551D6F72A96B197004C0D08 /* round-medium-green.usdz in Resources */,
-				6551D6F22A96B197004C0D08 /* rectangle-medium-green.usdz in Resources */,
 				6533ED952A93665400CCB5A9 /* Preview Assets.xcassets in Resources */,
-				6551D6F82A96B197004C0D08 /* round-light-pink.usdz in Resources */,
-				6551D6F52A96B197004C0D08 /* oval-medium-blue.usdz in Resources */,
 				6533ED922A93665400CCB5A9 /* Assets.xcassets in Resources */,
-				6551D6F02A96B197004C0D08 /* aviator-light-gray.usdz in Resources */,
-				6551D6EE2A96B197004C0D08 /* square-medium-pink.usdz in Resources */,
-				6551D6F62A96B197004C0D08 /* cateye-dark-green.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

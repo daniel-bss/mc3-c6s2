@@ -29,8 +29,8 @@ struct RootFaceDetectionView: View {
             }
         }
         .navigationDestination(isPresented: $isPresented, destination: {
-            FaceShapeResult() // coretan
-//            ARMainView()
+//            FacerShapeResult() // coretan
+            ARMainView()
                 .navigationBarBackButtonHidden(true)
         })
         .onReceive(timer) { _ in

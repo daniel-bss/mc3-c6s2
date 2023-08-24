@@ -36,49 +36,29 @@ struct ARMainView: View {
             
             HStack {
                 ForEach(self.frameAssets, id: \.self) { frameImageName in
-//                    Circle()
-//                        .fill(.white)
-//                        .overlay(GeometryReader {
-//                            let side = sqrt($0.size.width * $0.size.width)
-//                            VStack {
-//                                Rectangle().foregroundColor(.clear)
-//                                    .frame(width: side, height: side)
-//                                    .overlay(
-//                                        Image(frameImageName)
-//                                            .resizable()
-//                                            .aspectRatio(contentMode: .fit)
-//                                    )
-//                            }
-//                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-//                        })
-//                        .frame(width: width, height: width)
                     Circle()
-                        .frame(width: 200, height: 200)
-                        .foregroundColor(.red)
+                        .fill(.white)
+                        .overlay(GeometryReader {
+                            let side = sqrt($0.size.width * $0.size.width)
+                            VStack {
+                                Rectangle().foregroundColor(.clear)
+                                    .frame(width: side, height: side)
+                                    .overlay(
+                                        Image("\(frameImageName)-img")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                    )
+                            }
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        })
+                        .frame(width: width, height: width)
+                        .padding(.trailing, 20)
                         .onTapGesture {
                             print(frameImageName)
                             self.frameAssetBefore = self.frameAsset
                             self.frameAsset = frameImageName
                         }
-                            
-                            
                 }
-//                Circle()
-//                    .frame(width: 100, height: 100)
-//                    .foregroundColor(.red)
-//                    .onTapGesture {
-//                        self.frameAssetBefore = self.frameAsset
-//                        self.frameAsset = AppManager.shared.satu
-//                    }
-//
-//                Circle()
-//                    .frame(width: 100, height: 100)
-//                    .foregroundColor(.blue)
-//                    .onTapGesture {
-//                        self.frameAssetBefore = self.frameAsset
-//                        self.frameAsset = AppManager.shared.dua
-//                    }
-                
             }
             .offset(y: 300)
         }

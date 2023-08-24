@@ -10,11 +10,14 @@ import SwiftUI
 struct ARMainView: View {
     @StateObject var vm = FaceDetectionEnvironmentObject()
     
-    @State var frameAsset: String = "round-light-pink"
-    @State var frameAssetBefore: String = "square-medium-pink"
+    @State var frameAsset: String = "oval-medium-blue"
+    @State var frameAssetBefore: String = "oval-medium-blue"
     @State var frameAssets: [String] = []
     
     @State var sheetIsPresented: Bool = false
+    
+    @State var stringOfFramesArray: [String] = []
+    @State var stringOfFrames: String = "aaa"
     
     let width: Double = 56 * 1.5 // = 84
     
@@ -42,14 +45,27 @@ struct ARMainView: View {
             }
             .sheet(isPresented: $sheetIsPresented) {
 //                Text("Based on our scanning you have a **\(frameAsset.split(separator: "-")[0])** and **\(frameAsset.split(separator: "-")[1]) Skin Tone**. So, your face suitable with eyeglasses that are **\(Cat Eye Frame)** and **\(Bright)** Color.")
-                Text("Based on our scanning you have a **\(vm.faceShapeName.capitalized) Face Shape** and **\(vm.skinToneName.capitalized) Skin Tone**")
+                Text("Based on our scanning you have a **\(vm.faceShapeName.capitalized) Face Shape** and **\(vm.skinToneName.capitalized) Skin Tone**. So, your face suitable with frames that are **\(stringOfFrames)**")
                     .presentationDetents([.height(200), .medium, .large])
                     .multilineTextAlignment(.center)
                     .presentationDragIndicator(.automatic)
                     .padding(.horizontal, 16)
             }
             .onAppear {
+                self.stringOfFramesArray = AppManager.shared.getFrameRecommendations(faceShape: vm.faceShapeName, skinTone: vm.skinToneName)
                 
+                var temp = ""
+                for i in 0..<stringOfFramesArray.count {
+                    if i != (stringOfFramesArray.count - 1) {
+//                        temp += "**\(String(stringOfFramesArray[i].split(separator: "-")[0]).capitalized)**" + ", "
+                        temp += "\(String(stringOfFramesArray[i].split(separator: "-")[0]).capitalized)" + ", "
+                    } else {
+//                        temp += "and " + "**\(String(stringOfFramesArray[i].split(separator: "-")[0]).capitalized)**"
+                        temp += "and " + "\(String(stringOfFramesArray[i].split(separator: "-")[0]).capitalized)"
+                    }
+                }
+                
+                self.stringOfFrames = temp
             }
             .offset(x: 120, y: -340)
             
